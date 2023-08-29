@@ -1,6 +1,6 @@
 #ifndef TMAGUI_H
 #define TMAGUI_H
-#include "tmaAPI/tma.cpp"
+#include "tmaAPI/tma.h"
 
 
 #include <QMainWindow>

@@ -15,13 +15,15 @@ SOURCES += \
     tmagui.cpp \
     tmaAPI/tma.cpp \
     tmaAPI/db_communicator.cpp \
-    tmaAPI/printouter.cpp \
     transactionstable.cpp
 
 HEADERS += \
     tmagui.h \
     tmaAPI/tma_config.h \
     tmaAPI/money_data.h \
+    tmaAPI/tma.h \
+    tmaAPI/db_communicator.h \
+    tmaAPI/printouter.h \
     transactionstable.h
 
 FORMS += \

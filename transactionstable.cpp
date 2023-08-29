@@ -1,7 +1,9 @@
 #include "transactionstable.h"
 #include "ui_transactionstable.h"
+#include "tmaAPI/printouter.h"
 #include <vector>
 #include <QDateTime>
+#include <QFileDialog>
 
 TransactionsTable::TransactionsTable(QWidget *parent) :
     QDialog(parent),
@@ -51,3 +53,18 @@ TransactionsTable::~TransactionsTable()
     delete table;
     delete tableModel;
 }
+
+void TransactionsTable::on_exportToCSVBtn_clicked()
+{
+    std::vector<std::string> dates;
+    for (MoneyData *val: *data) {
+        QDateTime date;
+        date.setSecsSinceEpoch(val->date);
+        dates.push_back(date.date().toString().toStdString());
+    } try {
+        Printout::toCSV(data, dates, QFileDialog::getSaveFileName(this, tr("Save CSV File"), QDir::currentPath(), tr("Text (*.CSV)")).toStdString());
+    } catch (CannotOpenCSVFileException) {
+        printf("Cannot save CSV File\n");
+    }
+}
+

@@ -1,6 +1,6 @@
 #include "tmagui.h"
 #include "ui_tmagui.h"
-#include "tmaAPI/tma.cpp"
+#include "tmaAPI/tma.h"
 #include "transactionstable.h"
 
 

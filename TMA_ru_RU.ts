@@ -118,5 +118,10 @@
         <source>Total sum (RUB): </source>
         <translation type="unfinished">Общая сумма (рублей): </translation>
     </message>
+    <message>
+        <location filename="transactionstable.ui" line="91"/>
+        <source>Export to CSV</source>
+        <translation type="unfinished">Экспорт в CSV</translation>
+    </message>
 </context>
 </TS>

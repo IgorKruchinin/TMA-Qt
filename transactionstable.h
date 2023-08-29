@@ -23,6 +23,9 @@ public:
     void getData(std::vector<MoneyData*> *data);
     void resetTable();
 
+private slots:
+    void on_exportToCSVBtn_clicked();
+
 private:
     Ui::TransactionsTable *ui;
     std::vector<MoneyData*> *data;
