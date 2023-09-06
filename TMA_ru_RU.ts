@@ -100,6 +100,11 @@
         <source>Show</source>
         <translation type="unfinished">Показать</translation>
     </message>
+    <message>
+        <location filename="tmagui.ui" line="176"/>
+        <source>Count:</source>
+        <translation type="unfinished">Количество:</translation>
+    </message>
 </context>
 <context>
     <name>TransactionsTable</name>

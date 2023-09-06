@@ -29,10 +29,14 @@ void TMAGUI::registerBtnFunc() {
     std::string name = ui->setName->currentText().toStdString();
     std::string category = ui->setCat->currentText().toStdString();
     uint32_t sum = ui->setSum->value();
+    uint32_t count = ui->setCount->value();
     try {
-        this->tma->append(date, code, name, sum, category);
+        for (uint32_t i = 0; i < count; ++i) {
+            this->tma->append(date, code, name, sum, category);
+        }
         resetBalance();
         resetHints();
+        ui->setCount->setValue(1);
     } catch (NoEnoughMoneyException) {
         ui->errFld->setText(noEnoughMoneyString);
     }

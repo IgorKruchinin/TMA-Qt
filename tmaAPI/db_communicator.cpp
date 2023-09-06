@@ -176,7 +176,6 @@ void DBCommunicator::writeCache(const std::string &fieldName, const std::string 
     char *caching_request = new char[1024];
     sprintf(caching_request, "INSERT INTO \'CACHE\' (ID, FIELD, VALUE) " \
             "VALUES(%d, \'%s\', \'%s\');", this->cacheSize(), fieldName.c_str(), value.c_str());
-    printf("%s", caching_request);
     this->exec(caching_request);
     delete[] caching_request;
 }
